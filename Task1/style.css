@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+section {
+  /* height: 100vh; */
+  padding: 50px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.navbar ul li a:hover {
+  background-color: #555;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.home-content button {
+  background-color: #778b24;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.home-content button:hover {
+  background-color: #555;
+}
+#home {
+  background-image: url("car-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
+  /* height: 90vh; */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.about-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Flexible columns */
+  gap: 10px; /* Space between cards */
+  background-color: antiquewhite;
+  /* height: 80vh; */
+  padding: 20px;
+}
+
+.card-container > div {
+  /* background-color: #f1f1f1;
+  height: 200px; 
+  min-height: 150px; 
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+.card-container > div > img {
+  /* width: 100%;
+  height: 100%; */
+  width: 100%; /* Makes image responsive within container */
+  max-width: 150px; /* Maximum width for smaller screens */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+#service {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: center;
+  max-height: 450px;
+}
+.service-card img {
+  width: 100%; /* Makes the image cover the card width */
+  max-height: 200px; /* Keeps aspect ratio */
+  object-fit: cover;
+}
+.card-text {
+  padding: 20px;
+  flex-grow: 1;
+}
+.card-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.card-text p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#contact {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.contact-card {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  text-align: center;
+}
+.contact-item span {
+  font-size: 1rem;
+  color: #555;
+}
+/* reponsive code  */
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2rem;
+  }
+  .home-content button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-content button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+/* for navigation */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  nav ul li:hover {
+    background-color: #f0f0f0; /* Change to desired hover color */
+    border-radius: 5px; /* Optional: Adds rounded corners for better visual */
+  }
+}
